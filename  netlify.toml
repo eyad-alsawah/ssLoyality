@@ -10,3 +10,16 @@
   to = "/.well-known/apple-app-site-association"
   status = 200
   force = true
+
+[[headers]]
+  for = "/.well-known/assetLinks.json"
+  [headers.values]
+    Content-Type = "application/json"
+    X-Content-Type-Options = "nosniff"
+    Cache-Control = "no-store"
+
+[[redirects]]
+  from = "/assetLinks.json"
+  to = "/.well-known/assetLinks.json"
+  status = 200
+  force = true
